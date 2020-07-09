@@ -109,7 +109,7 @@ export default function OriginInfo(props) {
           </Grid>
         </Grid>
         <Grid container spacing={2} className={classes.my_1}>
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={6}>
             <Typography variant="h6" gutterBottom className="title label_title">
               Date of birth
             </Typography>
@@ -121,9 +121,7 @@ export default function OriginInfo(props) {
               disabled
             />
           </Grid>
-        </Grid>
-        <Grid container spacing={2} className={classes.my_1}>
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={6}>
             <Typography variant="h6" gutterBottom className="title label_title">
               Place of birth
             </Typography>
