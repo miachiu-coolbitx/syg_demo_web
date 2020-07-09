@@ -1,9 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import TransInfo from "./OriVasp/TransferInfo";
+import TransInfo from "./OriVasp/Form";
 import OriginInfo from "./OriVasp/OriginInfo";
 import Button from "@material-ui/core/Button";
-import BeneResult from "./BeneInfo/BeneResult";
+import BeneResult from "./OriVasp/BeneResult";
 
 const useStyles = makeStyles((theme) => ({
   layout: {

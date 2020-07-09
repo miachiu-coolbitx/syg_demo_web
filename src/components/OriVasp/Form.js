@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TransInfo(props) {
+export default function Form(props) {
   const classes = useStyles();
   const margin = {
     margin: "30px 0",
@@ -52,7 +52,7 @@ export default function TransInfo(props) {
             <Typography variant="h6" gutterBottom className="title label_title">
               currency
             </Typography>
-            <FormControl fullWidth required error={!!getError("currency")}>
+            {/* <FormControl fullWidth required>
               <Select
                 id="currency"
                 name="currency"
@@ -63,6 +63,7 @@ export default function TransInfo(props) {
                 classes={{ root: classes.root }}
                 disabled={disable}
                 helperText={getError("currency")}
+                error={!!getError("currency")}
               >
                 <MenuItem value="" disabled>
                   Select
@@ -70,13 +71,29 @@ export default function TransInfo(props) {
                 <MenuItem value={"BTC"}>BTC</MenuItem>
                 <MenuItem value={"ETH"}>ETH</MenuItem>
               </Select>
-              {/* {currency === "" ? (
-                <FormHelperText>Here's my helper text</FormHelperText>
-              ) : null} */}
-              {/* <FormHelperText helperText={getError("currency")}>
-                Here's my helper text
-              </FormHelperText> */}
-            </FormControl>
+            </FormControl> */}
+
+            <TextField
+              required
+              id="currency"
+              name="currency"
+              value={currency}
+              onChange={handleChange}
+              //displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+              classes={{ root: classes.root }}
+              disabled={disable}
+              helperText={getError("currency")}
+              error={!!getError("currency")}
+              select
+              fullWidth
+            >
+              <MenuItem value="" disabled>
+                Select
+              </MenuItem>
+              <MenuItem value={"BTC"}>BTC</MenuItem>
+              <MenuItem value={"ETH"}>ETH</MenuItem>
+            </TextField>
           </Grid>
         </Grid>
         <Grid container spacing={2}>

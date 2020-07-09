@@ -7,12 +7,6 @@ const marginTop = {
   marginTop: "30px",
 };
 
-const divider = {
-  display: "block",
-  borderBottom: "1px solid #C5CEE0",
-  margin: "7px 0",
-};
-
 const grayTxt = {
   marginTop: "5px",
   color: "#8F9BB3",
@@ -34,9 +28,6 @@ export default function BeneResult(props) {
         <Typography gutterBottom variant="h6" className="title">
           Beneficiary Result
         </Typography>
-        <Typography gutterBottom variant="h6" className="title label_title">
-          Originator
-        </Typography>
         <Grid container>
           <Grid item xs={4} md={3}>
             <Typography variant="h6" className="title label_title">
@@ -47,7 +38,7 @@ export default function BeneResult(props) {
             <TestBlu>9eee630c20a2aa894373216b32343c9eee630c20</TestBlu>
           </Grid>
         </Grid>
-        <div style={divider}></div>
+        <div className="divider"></div>
         <Grid container>
           <Grid item xs={4} md={3}>
             <Typography variant="h6" className="title label_title">
@@ -63,7 +54,7 @@ export default function BeneResult(props) {
             )}
           </Grid>
         </Grid>
-        <div style={divider}></div>
+        <div className="divider"></div>
         <Grid container>
           <Grid item xs={4} md={3}>
             <Typography variant="h6" className="title label_title">

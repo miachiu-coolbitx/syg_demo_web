@@ -18,12 +18,6 @@ const marginTop = {
   marginTop: "30px",
 };
 
-const divider = {
-  display: "block",
-  borderBottom: "1px solid #C5CEE0",
-  margin: "7px 0",
-};
-
 const deepBlue = {
   borderColor: "#006FB1",
   color: "#006FB1",
@@ -77,7 +71,7 @@ export default function PrivateInfo(props) {
             </React.Fragment>
           ))}
         </Grid>
-        <div style={divider}></div>
+        <div className="divider"></div>
         <Grid container>
           <Grid item xs={4} md={3}>
             <Typography variant="h6" className="title label_title">

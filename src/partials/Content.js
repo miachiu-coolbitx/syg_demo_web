@@ -12,7 +12,7 @@ import { Tab, Tabs } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import Bridge from "../components/Bridge";
 import Originator from "../components/OriVASP";
-import BeneInfo from "../components/BeneInfo/BeneInfo";
+import BeneInfo from "../components/BeneVASP";
 import "typeface-noto-sans";
 import "typeface-open-sans";
 
@@ -163,7 +163,7 @@ function Content(props) {
     o_address: "0x05ECAf39376088D7C8bF1aCc06018D7C8bF1aCc0601",
     phy_address: "Bahnhofstrasse 665, 8001 Zurich, Switzerland",
     birth: "1975-05-02",
-    place: "Japan",
+    place: "Switzerland",
     identity: "-",
     identity_num: "-",
   });
@@ -283,9 +283,8 @@ function Content(props) {
                     } else if (activeStep === 2) {
                       setActiveStep(activeStep - 1); //activeStep+-*/   === ==       =
                       setClickCount(0); //clickCount === 0 => true / false
-                    } else if (activeStep > 0) {
-                      setActiveStep(activeStep - 1);
-                      setValue(value - 1);
+                    } else if (activeStep === 3) {
+                      return;
                     }
                   }}
                 >
