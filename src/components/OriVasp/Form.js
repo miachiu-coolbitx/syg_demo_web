@@ -1,18 +1,18 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import TextField from "@material-ui/core/TextField";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormHelperText from "@material-ui/core/FormHelperText";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    fontSize: "14px",
-    color: "#222b45",
-    boxSizing: "border-box",
+    fontSize: '14px',
+    color: '#222b45',
+    boxSizing: 'border-box',
   },
   my_1: {
     marginTop: theme.spacing(1),
@@ -22,21 +22,21 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(4),
   },
   capitalize: {
-    textTransform: "capitalize",
-    letterSpacing: "0.05rem",
-    color: "#42826B",
-    fontWeight: "600",
-    fontFamily: "Open Sans",
+    textTransform: 'capitalize',
+    letterSpacing: '0.05rem',
+    color: '#42826B',
+    fontWeight: '600',
+    fontFamily: 'Open Sans',
   },
 }));
 
 export default function Form(props) {
   const classes = useStyles();
   const margin = {
-    margin: "30px 0",
+    margin: '30px 0',
   };
   const marginTop = {
-    marginTop: "30px",
+    marginTop: '30px',
   };
   const { disable, transferInfo, handleChange, inputErrors } = props;
   const { currency, amount, b_name, vasp, address } = transferInfo;
@@ -52,48 +52,48 @@ export default function Form(props) {
             <Typography variant="h6" gutterBottom className="title label_title">
               currency
             </Typography>
-            {/* <FormControl fullWidth required>
+            <FormControl fullWidth required error={!!getError('currency')}>
               <Select
                 id="currency"
                 name="currency"
                 value={currency}
                 onChange={handleChange}
                 displayEmpty
-                inputProps={{ "aria-label": "Without label" }}
+                inputProps={{ 'aria-label': 'Without label' }}
                 classes={{ root: classes.root }}
                 disabled={disable}
-                helperText={getError("currency")}
-                error={!!getError("currency")}
+                helperText={getError('currency')}
+                // error={!!getError("currency")}
               >
                 <MenuItem value="" disabled>
                   Select
                 </MenuItem>
-                <MenuItem value={"BTC"}>BTC</MenuItem>
-                <MenuItem value={"ETH"}>ETH</MenuItem>
+                <MenuItem value={'BTC'}>BTC</MenuItem>
+                <MenuItem value={'ETH'}>ETH</MenuItem>
               </Select>
-            </FormControl> */}
+            </FormControl>
 
-            <TextField
+            {/* <TextField
               required
               id="currency"
               name="currency"
               value={currency}
               onChange={handleChange}
               //displayEmpty
-              inputProps={{ "aria-label": "Without label" }}
+              inputProps={{ 'aria-label': 'Without label' }}
               classes={{ root: classes.root }}
               disabled={disable}
-              helperText={getError("currency")}
-              error={!!getError("currency")}
+              helperText={getError('currency')}
+              error={!!getError('currency')}
               select
               fullWidth
             >
               <MenuItem value="" disabled>
                 Select
               </MenuItem>
-              <MenuItem value={"BTC"}>BTC</MenuItem>
-              <MenuItem value={"ETH"}>ETH</MenuItem>
-            </TextField>
+              <MenuItem value={'BTC'}>BTC</MenuItem>
+              <MenuItem value={'ETH'}>ETH</MenuItem>
+            </TextField> */}
           </Grid>
         </Grid>
         <Grid container spacing={2}>
@@ -111,9 +111,9 @@ export default function Form(props) {
               value={amount}
               disabled={disable}
               onChange={handleChange}
-              inputProps={{ min: "0" }}
-              helperText={getError("amount")}
-              error={!!getError("amount")}
+              inputProps={{ min: '0', step: 0.00001 }}
+              helperText={getError('amount')}
+              error={!!getError('amount')}
             />
           </Grid>
         </Grid>
@@ -136,8 +136,8 @@ export default function Form(props) {
               value={b_name}
               disabled={disable}
               onChange={handleChange}
-              helperText={getError("b_name")}
-              error={!!getError("b_name")}
+              helperText={getError('b_name')}
+              error={!!getError('b_name')}
             />
           </Grid>
         </Grid>
@@ -146,23 +146,23 @@ export default function Form(props) {
             <Typography variant="h6" gutterBottom className="title label_title">
               beneficiary VASP Code
             </Typography>
-            <FormControl fullWidth required error={!!getError("vasp")}>
+            <FormControl fullWidth required error={!!getError('vasp')}>
               <Select
                 id="vasp"
                 name="vasp"
                 value={vasp}
                 onChange={handleChange}
                 displayEmpty
-                inputProps={{ "aria-label": "Without label" }}
+                inputProps={{ 'aria-label': 'Without label' }}
                 classes={{ root: classes.root }}
                 disabled={disable}
-                helperText={getError("vasp")}
+                helperText={getError('vasp')}
               >
                 <MenuItem value="" disabled>
                   Select
                 </MenuItem>
-                <MenuItem value={"VASP in USA"}>VASP in USA</MenuItem>
-                <MenuItem value={"VASP in JP"}>VASP in JP</MenuItem>
+                <MenuItem value={'VASP in USA'}>VASP in USA</MenuItem>
+                <MenuItem value={'VASP in JP'}>VASP in JP</MenuItem>
               </Select>
             </FormControl>
           </Grid>
@@ -179,8 +179,8 @@ export default function Form(props) {
               value={address}
               disabled={disable}
               onChange={handleChange}
-              helperText={getError("address")}
-              error={!!getError("address")}
+              helperText={getError('address')}
+              error={!!getError('address')}
             />
           </Grid>
         </Grid>
